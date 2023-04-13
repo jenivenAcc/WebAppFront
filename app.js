@@ -1,6 +1,35 @@
 const submit = document.querySelector('#submit');
 const login = document.querySelector('#login');
-const addproduct = document.querySelector('#addproduct')
+let addproduct = document.getElementById("addproduct")
+let shop = document.getElementById("shop");
+let login_submit= document.getElementById("login-submit")
+
+let shopProduct = [
+    {
+        productname : "perette",
+        productdesc : "Chocolate Milk, 250ml, Pack of 6",
+        productprice : "56",
+        productimg:"perette.png"
+    }
+]
+
+
+
+let generateProducts =()=>{
+    return (shop.innerHTML= shopProduct.map((x) => {
+        return `<div class="item">
+        <img class="prod-img" src=${x.productimg} alt="">
+        <div class="details">
+            <h3 class = "prodtitle">${x.productname}</h3>
+            <div class = "desc">${x.productdesc}</div>
+            <div class="price-quantity">
+                <h4>Rs ${x.productprice}</h4>
+                <a class="prodcart" href="productview.php"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>`
+    }))
+}
 
 //Register
 const addUser = async()=>{
@@ -60,28 +89,28 @@ const loginUser = async()=>{
 
 }
 const addProduct = async()=>{
-    var formData 
     let prodName= document.getElementById('prod-name').value;
     let prodDesc= document.getElementById('prod-desc').value;
     let prodPrice= document.getElementById('prod-price').value;
     let prodImg= document.getElementById('prod-image').files[0];
+
+
+    let formData = new FormData();
+    formData.append('name',prodName)
+    formData.append('desc',prodDesc)
+    formData.append('price',prodPrice)
+    formData.append('image',prodImg)
+    
+    const req = new XMLHttpRequest();
+    req.open("POST","http://localhost:8080/products/uploadimage")
+    req.send(formData)
+    
     const blobImg = new Blob([prodImg])
-
-    var jsonObj = JSON.stringify({ 
-                      prodname:prodName,
-                      proddesc:prodDesc,
-                      prodprice:prodPrice})
-
-    axios({
-        method :'post',
-        url:'http://localhost:8080/products/uploadimage',
-        data: jsonObj
-    }
-    )
 }
 
 
 
 submit.addEventListener('click',addUser);
-login.addEventListener('click',loginUser);
+// login.addEventListener('click',loginUser);
+login_submit.addEventListener('click',generateProducts);
 addproduct.addEventListener('click',addProduct)

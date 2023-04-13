@@ -15,7 +15,7 @@
 </head>
 <body>
     <section id="header">
-        <a href="#"><img src="" class="logo" alt=""></a>
+        <a href="#"><img src="images/Logo.png" class="logo" alt=""></a>
         <div>
             <h1>E Commerce</h1>
         </div>
@@ -27,26 +27,66 @@
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
     
-                <span class="menu">
+                <!-- <span class="menu">
                     <ul>
                         <li class="active"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
                             <div class="submenu">
                                 <ul>
-                                    <li><a href="login.php" data-toggle="modal" data-target="#exampleModalCenter2">Log
-                                            In</a></li>
-                                    <li><a href="register.html" data-toggle="modal"
-                                            data-target="#exampleModalCenter">Register</a></li>
+                                    <li><a href="login.php" data-toggle="modal" data-target="#exampleModalCenter2">Log In</a></li>
+                                    <li><a href="register.html" data-toggle="modal" data-target="#exampleModalCenter">Register</a></li>
                                 </ul>
                             </div>
                         </li>
                     </ul>
-                </span>
+                </span> -->
     
             </ul>
         </div>
     </section>
 
+    <!-- Sign Up Pop Up -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label class="col-form-label">Username</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">Email</label>
+                            <input type="text" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Password</label>
+                            <input type="text" class="form-control" id="password" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="submit" >Register</button>
+                </div>
+                <div class="h2-center">
+                    <h4>Already Have an Account?</h4>
+                </div>
+                <div class="h2-center">
+                    <button id="login-submit" type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter2" >Log In</button> 
+                </div>
+                <div class="modal-footer h2-center error-text" id="errorMsgReg"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenterProd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -58,7 +98,7 @@
                 </div>
                 <div class="modal-body">
                     <form>
-                        <div class="form-group">
+                        <div class="form-group" enctype=”multipart/form-data>
                             <label class="col-form-label">Product Name</label>
                             <input type="text" class="form-control" name="prod-desc" id="prod-name" required>
                         </div>
@@ -77,61 +117,20 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="addproduct">Register</button>
+                    <button type="button" class="btn btn-secondary addproduct" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"  id="addproduct">Add Product</button>
                 </div>
                 
             </div>
         </div>
     </div>
 
-    <!-- Register Button -->
-    <button formmethod="post" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><a
+    <button formmethod="post" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenterProd"><a
     style="text-decoration:none; color: antiquewhite;" href="#modalfade">Add Product</a>
     </button>
 
     <div id="shop" class="shop">
-        <div class="item">
-            <img class="prod-img" src="perette.png"  alt="">
-            <div class="details">
-                <h5>Tshirt Floral</h5>
-                <div class="price-quantity">
-                    <h4>Rs 500</h4>
-                    <a class="prodcart" href="productview.php"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a>
-                </div>
-    
-            </div>
-        </div>
-        <div class="item">
-            <img class="prod-img" src="perette.png" alt="">
-            <div class="details">
-                <h5>Tshirt Floral</h5>
-                <div class="price-quantity">
-                    <h4>Rs 500</h4>
-                    <a class="prodcart" href="productview.php"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="prod-img" src="perette.png" alt="">
-            <div class="details">
-                <h5>Tshirt Floral</h5>
-                <div class="price-quantity">
-                    <h4>Rs 500</h4>
-                    <a class="prodcart" href="productview.php"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="prod-img" src="perette.png" alt="">
-            <div class="details">
-                <h5>Tshirt Floral</h5>
-                <div class="price-quantity">
-                    <h4>Rs 500</h4>
-                    <a class="prodcart" href="productview.php"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

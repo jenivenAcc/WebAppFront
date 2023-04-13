@@ -290,3 +290,14 @@ body {
 .imgupl{
     display: block;
 }
+
+.desc{
+    font-size: small;
+    justify-content: center;
+    text-align: center;
+}
+
+.prodtitle{
+    justify-content: center;
+    text-align: center;
+}
