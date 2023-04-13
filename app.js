@@ -100,12 +100,12 @@ const addProduct = async()=>{
     formData.append('desc',prodDesc)
     formData.append('price',prodPrice)
     formData.append('image',prodImg)
-    
+
     const req = new XMLHttpRequest();
     req.open("POST","http://localhost:8080/products/uploadimage")
     req.send(formData)
     
-    const blobImg = new Blob([prodImg])
+    const blobImg = new Blob([prodImg]) 
 }
 
 
