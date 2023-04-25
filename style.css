@@ -301,3 +301,280 @@ body {
     justify-content: center;
     text-align: center;
 }
+
+/* Prod Details */
+.product-small-img img{
+    height: 92px;
+    margin: 10px 0;
+    cursor:pointer;
+    display: flex;
+    flex-direction: row;
+    opacity: .7;
+    transition: 0.2s ease;
+}
+.product-small-img{
+    float: left;
+}
+.product-small-img img:hover{
+    opacity: 1;
+    height: 94px;
+    transition: 0.2s ease;
+}
+.viewproduct{
+    margin-top: 30px;
+    display: flex;
+    gap: 5px;
+    position: relative;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+.img-container img{
+    height: 500px;
+}
+.img-container{
+    float: right;
+}
+.prod-details{
+    width: 300px;
+    margin: 7px;
+    gap: 7px;
+    text-align: center;
+    justify-content: center;
+}
+
+.prod-details h3,p{
+    text-align: left;
+    margin-left: 10px;
+    
+}
+.prod-qty-action{
+    height: 50px;
+    width: 90%;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.actions{
+    width: 130px;
+}
+.cart-btn{
+    margin: 0 auto;
+    display: block;
+    background-color: #6e3820;
+    border-radius: 6px;
+    padding: 5px;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+.qty-flex{
+    padding: 7px;
+    display: flex;
+    gap: 7px;
+    border: 1px solid black;
+    border-radius: 4px;
+    align-items: center;
+}
+.prod-qty{
+    width: 25px;
+    border: 0;
+    height: 35px;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.prod-qty:focus{
+    outline: none;
+}
+
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+
+
+
+.cart-container{
+    max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1.5em;
+}
+.content-section {
+    margin: 1em;
+}
+
+#hero{
+    background-image:url("bg.jpg");
+    height: 90vh;
+    width: 100%;
+    background-position: top 25% right 0%;
+    background-size: cover;
+    padding: 0px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+        width: 100%;
+        margin-bottom: 30px;
+}
+
+#hero h4:hover{
+    font-size: 21px;
+    color: rgb(84, 68, 79);
+    transition: 0.3s ease;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+}
+
+
+#hero h1 {
+    color: rgb(36, 73, 74);
+}
+
+#hero h1:hover {
+    font-size: 52px;
+    color: rgb(84, 68,79);
+    text-shadow: 2px -1px 3px rgb(227, 209, 209) ;
+    transition: 0.3s ease;
+}
+
+#hero h2:hover{
+    font-size: 48px;
+    transition: 0.3s ease;
+}
+
+#hero p:hover{
+    font-size:18px;
+    color: darkslategrey;
+    margin-left: 5px;
+    transition: 0.3s ease;
+}
+
+#hero button{
+    background-image: url("images/button.png") ;
+    background-color: transparent;
+    padding: 23px 30px ;
+    border: 0;
+    text-align: center;
+    text-indent:20px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+#hero a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+#hero a:hover{
+    text-decoration:none;
+    color: black;
+    font-size: 17px;
+    transition: 0.3s ease;
+}

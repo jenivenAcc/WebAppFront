@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="images/Logo.png" class="logo" alt=""></a>
+        <div>
+            <h1>E Commerce</h1>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="registration.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+    
+                <span class="menu">
+                    <ul>
+                        <li class="active"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="login.php" data-toggle="modal" data-target="#exampleModalCenter2">Log In</a></li>
+                                    <li><a href="register.html" data-toggle="modal" data-target="#exampleModalCenter">Register</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </span>
+    
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="viewproduct">
+            <div class="product-small-img">
+                <img src="" onclick="displayImg(this)">
+                <img src="" onclick="displayImg(this)">
+                <img src="" onclick="displayImg(this)">
+            </div>
+            <div class="img-container">
+                <img id="imageBox" src="images/products/pant1/p1.webp">
+            </div>
+            <div class="prod-details">
+                <h2>Perette</h2>
+                <h3>Description</h3>
+                <div class="prod-qty-action">
+                    <div class="qty-flex">
+                        <div><i class="bi bi-dash-lg minus"></i></div>
+                        <input type="number" name="prod-qty" id="prod-qty" class="prod-qty" maxlength="10S" value=1>
+                        <div ><i class="bi bi-plus-lg plus"></i></div>
+                    </div>
+                    
+                    <div class="actions">
+                        <button type="submit" title="Add to cart" class="cart-btn" id="cart-btn"><span>Add to cart</span></button>
+                    </div>
+                </div>
+                <p>Our policies</p>
+                <p>Availability:<span>In Stock</span></p>
+            </div>
+        </div>
+    </section>
+    <section class="cart-container content-section">
+        <h2 class="cart-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+            <div class="cart-row">
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image" src="images/products/dress1/d1.webp" alt="" width="100" height="100">
+                    <span class="cart-item-title">Dress</span>
+                </div>
+                <span class="cart-price cart-column">Rs 500</span>
+                <div class="cart-quantity cart-column">
+                    <input class="cart-quantity-input" value="1">
+                    <button class="btn btn-danger" type="button">REMOVE</button>
+                </div>
+            </div>
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+
+    </section>
+
+    <script>
+        function displayImg(smallImg){
+            var fullImg = document.getElementById("imageBox");
+            fullImg.src = smallImg.src;
+        }
+    </script>
+
+</body>
+</html>
